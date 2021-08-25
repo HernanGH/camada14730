@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websocket part 1</title>
+</head>
+<body>
+
+    <script type="text/html" id="my_template">
+        <h4> <%= title %></h4>
+        <ul>
+            <% items.forEach(e => { %>
+                <li><%= e.value %> su id es <b> <%= e.id %>< </b> </li>
+            <% }) %>
+        </ul>
+    </script>
+    <div id="to_render"></div>
+    
+    <label for="">Tu</label>
+    <input type="text" id='mensaje'>
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.6/ejs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
