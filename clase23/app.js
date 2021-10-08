@@ -4,6 +4,7 @@ let input = require('./input.json');
 let blogs = require('./blogposts.json');
 let holding = require('./holding');
 let empresas = require('./empresa');
+let escuela = require('./escuela');
 let {normalize,schema} = require('normalizr');
 
 // Define a users schema
@@ -39,8 +40,21 @@ const empresaSchema = new schema.Entity('empresa',{
 })
 
 
+const empleado = new schema.Entity('empleado');
 
-const normalizedData = normalize(empresas, empresaSchema);
+const _empresaSchema = new schema.Entity('empresas',{
+  gerente:empleado,
+  encargado:empleado,
+  empleados:[empleado]
+})
+
+const holdingSchema = new schema.Entity('holding',{
+  empresas:[_empresaSchema]
+})
+
+
+
+const normalizedData = normalize(holding, holdingSchema);
 
 
 console.log(JSON.stringify(normalizedData))
