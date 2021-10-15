@@ -1,0 +1,41 @@
+entities: {
+    messages: {
+      ''seriedigital@gmail.com'': [{
+        id: 1,
+        msg: '222',
+        date: '2021-10-04 12:05:28.216'
+      },{
+        id: 2,
+        msg: '23423',
+        date: '2021-10-04 15:54:24.254'
+      },{
+        id: 5,
+        msg: 'oeu´,.pu,',
+        date: '2021-10-04 16:02:03.953'
+      },{
+        id: 4,
+        msg: 'uioeuioeuiu oeuioeuieu',
+        date: '2021-10-10 17:21:18.952'
+      }
+    ],
+ "jona@gmail.com'': [{
+        id: 3,
+        msg: '222',
+        date: '2021-10-04 12:05:28.216'
+      },{
+        id: 6,
+        msg: '23423',
+        date: '2021-10-04 15:54:24.254'
+      },{
+        id: 7,
+        msg: 'oeu´,.pu,',
+        date: '2021-10-04 16:02:03.953'
+      },{
+        id: 4,
+        msg: 'uioeuioeuiu oeuioeuieu',
+        date: '2021-10-10 17:21:18.952'
+      }
+    ]
+  },
+  result: [ "seriedigital@gmail.com", "jona@gmail.com" ]
+} (
