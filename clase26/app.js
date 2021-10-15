@@ -22,9 +22,9 @@ passport.use('login', new LocalStrategy({
 passReqToCallback:true    
 },
 function (req,username,password,done){
-    let user = usuarios.filter(usuario => usuario.username == username)
+    let user = usuarios.find(usuario => usuario.username == username) 
     if (!user) return done(null,false)
-    let success = user.username == username && user.password == password;
+    let success = user.username == username && user.password == password; // En caso de usar filter linea 25 -> user[0] 
     if (!success) return done(null,false)
     user.count = 0;
     return done(null,user);
