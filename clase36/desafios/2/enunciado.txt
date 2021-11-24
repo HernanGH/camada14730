@@ -1,0 +1,11 @@
+Realizar un servidor en Node.js que contenga en su carpeta pública un formulario que permita:
+ingresar un número de Whatsapp, un mensaje de texto y en forma opcional una url para enviar un archivo adjunto.
+
+Trabajar con la cuenta Twilio Whatsapp SandBox (https://www.twilio.com/console/sms/whatsapp/sandbox/) habilitando a través de este servicio, el número telefónico del Whatsapp en el que se quieren recibir los mensajes.
+
+El formulario enviará los datos al servidor a través de una ruta post. Al recibir la información, se recuperarán los datos y se enviará el mensaje de Whatsapp.
+
+Verificar que este mensaje y adjunto (si se incluye) lleguen al número indicado y que la operación se refleje en la consola de Twilio.
+
+Nota: Twilio nos dá un número gratis para el envió de Whatsapp que viene con un monto en USD.
+Cada vez que enviemos un mensaje, se descontará el costo de la operación de dicho monto.
