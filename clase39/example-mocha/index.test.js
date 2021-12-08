@@ -75,7 +75,6 @@ describe("comprobando que saveToFileCb() funcione bien", function() {
     })
 })
 
-
 describe("comprobando que saveToFilePromises() funcione bien", function() {
 
     before(function() {

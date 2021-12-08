@@ -1,9 +1,10 @@
-const request = require('supertest')('http://localhost:8080')
+const supertest = require('supertest');
+const request = supertest('http://localhost:8080')
 const expect = require('chai').expect
 const generador = require('../generador/usuarios')
 
-let usuario = generador.get()
-console.log(usuario)
+// let usuario = generador.get()
+// console.log(usuario)
 
 describe('test api rest full', () => {
     describe('GET', () => {
@@ -21,7 +22,7 @@ describe('test api rest full', () => {
                 email: 'pepe@gmail.com'
             } */
             let usuario = generador.get()
-
+            console.log(usuario)
             let response = await request.post('/api').send(usuario)
             //console.log(response.status)
             //console.log(response.body)
