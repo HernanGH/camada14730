@@ -1,5 +1,6 @@
 import { v4 } from "../deps.ts";
 import { Product } from "../types/types.ts";
+
 let products: Product[] = [
   {
     id: "1",
@@ -24,6 +25,7 @@ let products: Product[] = [
 // @desc Get Products
 // @route Get /api/products
 const getProducts = async (request: any, response: any) => {
+  console.log('asd')
   await response.json({
     error: false,
     data: products,
@@ -86,8 +88,8 @@ const updateProduct = async (request: any, response: any) => {
       price?: number;
     } = data;
 
-    products = products.map((p) =>
-      p.id === id_param ? { ...p, ...updateData } : p
+    products = products.map((productItem) =>
+      productItem.id === id_param ? { ...productItem, ...updateData } : productItem
     );
 
     response.json({

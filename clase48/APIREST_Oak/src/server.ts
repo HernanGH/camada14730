@@ -8,6 +8,9 @@ const app = new Application();
 
 app.use(logger);
 app.use(router.routes());
+// app.use((ctx) => {
+//     ctx.response.body = "Hello world!"
+// })
 
 console.log(`Server up on port ${PORT}`);
 

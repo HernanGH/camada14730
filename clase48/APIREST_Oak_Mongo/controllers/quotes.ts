@@ -88,6 +88,7 @@ const addQuote = async ({
     } else {
       const body = await request.body();
       const quote = await body.value;
+      // inserto en mongo nuevo usuario
       await quotes.insertOne(quote);
       response.status = 201;
       response.body = {
